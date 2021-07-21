@@ -25,11 +25,3 @@ app.use('/posts',postRoutes);
 //     }
 //     console.log("Connected successfully!!!");
 // })
-
-const CONNECTION_URL = 'mongodb+srv://Houssame_social:1234test@cluster0.rrrzx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
-const PORT = process.env.PORT || 5000
-mongoose.connect(CONNECTION_URL,{useNewUrlParser:true,useUnifiedTopology:true})
-.then(() =>app.listen(PORT,()=>{console.log(`Server is running on port : ${PORT}`)}))
-.catch(err =>console.log(err.message))
-
-mongoose.set('useFindAndModify',false);
